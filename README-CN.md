@@ -34,7 +34,7 @@
 <p align="center" style="line-height: 1.5; font-size: 18px; margin: 4px auto; text-decoration: underline;"><a href="README.md">English Version</a></p>
 
 <p align="center">
-  专为 <b>coding-plan</b> 用户设计的 MiniMax 模型上下文协议(MCP)服务器，提供针对代码开发工作流优化的AI搜索和视觉分析API。与标准的 <a href="https://github.com/MiniMax-AI/MiniMax-MCP">MiniMax-MCP</a> 不同，此版本提供专门的编程工具（例如<code>coding_plan_search</code> 和 <code>coding_plan_vlm</code>），可无缝集成到 <a href="https://www.anthropic.com/claude">Claude Desktop</a>、<a href="https://www.cursor.so">Cursor</a>、<a href="https://codeium.com/windsurf">Windsurf</a>、<a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> 等 MCP 客户端，以增强您的编码体验。
+  专为  <a href="https://platform.minimaxi.com/docs/coding-plan/intro">coding-plan</a> 用户设计的 MiniMax 模型上下文协议(MCP)服务器，提供针对代码开发工作流优化的AI搜索和视觉分析API。与标准的 <a href="https://github.com/MiniMax-AI/MiniMax-MCP">MiniMax-MCP</a> 不同，此版本提供专门的编程工具（例如<code>coding_plan_search</code> 和 <code>coding_plan_vlm</code>），可无缝集成到 <a href="https://www.anthropic.com/claude">Claude Desktop</a>、<a href="https://www.cursor.so">Cursor</a>、<a href="https://codeium.com/windsurf">Windsurf</a>、<a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> 等 MCP 客户端，以增强您的编码体验。
 </p>
 
 ## Documentation

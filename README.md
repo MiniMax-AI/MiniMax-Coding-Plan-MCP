@@ -32,7 +32,7 @@
 </div>
 
 <p align="center">
-  Specialized MiniMax Model Context Protocol (MCP) server designed for <b>coding-plan</b> users, featuring AI-powered search and vision analysis APIs optimized for code development workflows. Unlike the standard <a href="https://github.com/MiniMax-AI/MiniMax-MCP">MiniMax-MCP</a>, this version provides coding-specific tools (for examples: <code>coding_plan_search</code> and <code>coding_plan_vlm</code>) that integrate seamlessly with MCP clients like <a href="https://www.anthropic.com/claude">Claude Desktop</a>, <a href="https://www.cursor.so">Cursor</a>, <a href="https://codeium.com/windsurf">Windsurf</a>, <a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> and others to enhance your coding experience.
+  Specialized MiniMax Model Context Protocol (MCP) server designed for  <a href="https://platform.minimax.io/docs/coding-plan/intro">coding-plan</a> users, featuring AI-powered search and vision analysis APIs optimized for code development workflows. Unlike the standard <a href="https://github.com/MiniMax-AI/MiniMax-MCP">MiniMax-MCP</a>, this version provides coding-specific tools (for examples: <code>coding_plan_search</code> and <code>coding_plan_vlm</code>) that integrate seamlessly with MCP clients like <a href="https://www.anthropic.com/claude">Claude Desktop</a>, <a href="https://www.cursor.so">Cursor</a>, <a href="https://codeium.com/windsurf">Windsurf</a>, <a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> and others to enhance your coding experience.
 </p>
 
 ## Documentation
