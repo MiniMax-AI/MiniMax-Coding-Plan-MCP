@@ -59,7 +59,7 @@ Go to `Claude > Settings > Developer > Edit Config > claude_desktop_config.json`
     "MiniMax": {
       "command": "uvx",
       "args": [
-        "minimax-mcp",
+        "minimax-coding-plan-mcp",
         "-y"
       ],
       "env": {

@@ -60,7 +60,7 @@
     "MiniMax": {
       "command": "uvx",
       "args": [
-        "minimax-mcp"
+        "minimax-coding-plan-mcp"
       ],
       "env": {
         "MINIMAX_API_KEY": "填写你的API密钥",
