@@ -39,7 +39,6 @@
 
 ## Documentation
 - [English Documentation](README.md)
-- [MiniMax-MCP-JS](https://github.com/MiniMax-AI/MiniMax-MCP-JS) - MiniMax MCP的官方JavaScript版本
 
 ## 快速开始使用 MCP 客户端
 1. 从[MiniMax国内开放平台](https://platform.minimaxi.com/user-center/basic-information/interface-key)｜[MiniMax国际开放平台](https://www.minimax.io/platform/user-center/basic-information/interface-key)获取你的 API 密钥。
@@ -136,14 +135,12 @@ which uvx
 
 ### 1. 网络搜索
 使用 `coding_plan_search` 工具在网络上搜索信息：
-```
-示例查询："2025年最新的AI突破"
-返回结果：包含标题、链接、摘要、日期和相关搜索查询的有机搜索结果
-```
+
+<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/99ff15e3-e5d6-48e2-8216-38c6abf03c71.image/png" style="display: 
+inline-block; vertical-align: middle; "/>
 
 ### 2. 图像分析
 使用 `coding_plan_vlm` 工具通过AI分析图像：
-```
-<img src="https://public-cdn-video-data-algeng.oss-cn-wulanchabu.aliyuncs.com/gen_image1.png?x-oss-process=image/resize,p_50/format,webp" style="display: 
+
+<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/1f8174a2-68d5-4576-b886-86933eab5280.image/png" style="display: 
 inline-block; vertical-align: middle; "/>
-```
