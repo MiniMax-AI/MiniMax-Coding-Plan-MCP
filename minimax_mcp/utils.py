@@ -24,6 +24,10 @@ def process_image_url(image_url: str) -> str:
     Raises:
         MinimaxRequestError: If image cannot be downloaded, read, or processed
     """
+    # Remove @ prefix if present
+    if image_url.startswith("@"):
+        image_url = image_url[1:]
+    
     # If already in base64 data URL format, pass through
     if image_url.startswith("data:"):
         return image_url

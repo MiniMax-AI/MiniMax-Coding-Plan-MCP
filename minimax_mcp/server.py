@@ -111,7 +111,9 @@ def web_search(
         image_source (str): The source location of the image to analyze.
             Accepts:
             - HTTP/HTTPS URL: "https://example.com/image.jpg"
-            - Local file path: "/path/to/image.png"
+            - Local file path (if starts with @, remove the @ prefix):
+                - Relative path: "images/photo.png"
+                - Absolute path: "/Users/username/Documents/image.jpg"
             Supported formats: JPEG, PNG, WebP
         
     Returns:
