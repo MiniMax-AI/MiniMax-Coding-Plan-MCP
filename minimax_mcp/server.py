@@ -105,15 +105,19 @@ def web_search(
     A powerful LLM that can analyze and understand image content from files or URLs, follow your instruction.
     Use this tool to understand images by LLM.
     Only support jpeg, png, webp formats. Other formats like pdf/gif/psd/svg and so on are not supported.
-        
+
     Args:
         prompt (str): The text prompt describing what you want to analyze or extract from the image.
         image_source (str): The source location of the image to analyze.
             Accepts:
             - HTTP/HTTPS URL: "https://example.com/image.jpg"
-            - Local file path (if starts with @, remove the @ prefix):
+            - Local file path:
                 - Relative path: "images/photo.png"
                 - Absolute path: "/Users/username/Documents/image.jpg"
+            IMPORTANT: If the file path starts with @ symbol, you MUST remove the @ prefix before passing to this function.
+            For example:
+                - If you see "@Documents/photo.jpg", use "Documents/photo.jpg"
+                - If you see "@/Users/username/image.png", use "/Users/username/image.png"
             Supported formats: JPEG, PNG, WebP
         
     Returns:
