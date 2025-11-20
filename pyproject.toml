@@ -1,7 +1,7 @@
 [project]
-name = "minimax-mcp"
-version = "0.0.17"
-description = "Minimax MCP Server"
+name = "minimax-coding-plan-mcp"
+version = "0.0.1"
+description = "Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users"
 authors = [
     { name = "Roy Wu", email = "zhengyu@minimax.chat" },
 ]
@@ -17,9 +17,8 @@ classifiers = [
 keywords = [
     "minimax",
     "mcp",
-    "text-to-speech",
-    "voice-cloning",
-    "video-generation",
+    "coding-plan-search",
+    "coding-plan-vlm",
 ]
 requires-python = ">=3.10"
 dependencies = [
@@ -37,7 +36,7 @@ dependencies = [
 ]
 
 [project.scripts]
-minimax-mcp = "minimax_mcp.server:main"
+minimax-coding-plan-mcp = "minimax_mcp.server:main"
 
 [project.optional-dependencies]
 dev = [
