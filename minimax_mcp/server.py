@@ -40,12 +40,13 @@ api_client = MinimaxAPIClient(api_key, api_host)
 @mcp.tool(
     description="""
     
-    Web Search API, works like Google Search. At most 10 queries per request.
+    Web Search API, works like Google Search.
     
-    COST WARNING: This tool makes an API call to Minimax which may incur costs. Only use when explicitly requested by the user.
-
     Args:
         query (str): The search query string. Use 3-5 keywords. Add the current date for time-sensitive queries, e.g. `latest iPhone 2025`
+        
+    Search Strategy:
+        - If no valid results found, try changing search keywords
         
     Returns:
         Text content with search results in JSON format. The response structure is:
@@ -104,9 +105,7 @@ def web_search(
     A powerful LLM that can analyze and understand image content from files or URLs, follow your instruction.
     Use this tool to understand images by LLM.
     Only support jpeg, png, webp formats. Other formats like pdf/gif/psd/svg and so on are not supported.
-    
-    COST WARNING: This tool makes an API call to Minimax which may incur costs. Only use when explicitly requested by the user.
-    
+        
     Args:
         prompt (str): The text prompt describing what you want to analyze or extract from the image.
         image_source (str): The source location of the image to analyze.
