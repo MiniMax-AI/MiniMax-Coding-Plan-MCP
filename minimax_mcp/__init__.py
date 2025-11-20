@@ -1,3 +1,3 @@
-"""Minimax MCP Server package."""
+"""Minimax Coding Plan MCP Server package."""
 
-__version__ = "0.0.17"
+__version__ = "0.0.1"
