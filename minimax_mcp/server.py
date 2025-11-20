@@ -26,9 +26,7 @@ from minimax_mcp.client import MinimaxAPIClient
 
 load_dotenv()
 api_key = os.getenv(ENV_MINIMAX_API_KEY)
-base_path = os.getenv(ENV_MINIMAX_MCP_BASE_PATH) or "~/Desktop"
 api_host = os.getenv(ENV_MINIMAX_API_HOST)
-resource_mode = os.getenv(ENV_RESOURCE_MODE) or RESOURCE_MODE_URL
 fastmcp_log_level = os.getenv(ENV_FASTMCP_LOG_LEVEL) or "WARNING"
 
 if not api_key:
@@ -72,7 +70,7 @@ api_client = MinimaxAPIClient(api_key, api_host)
         }
     """
 )
-def coding_plan_search(
+def web_search(
     query: str,
 ) -> TextContent:
     try:
@@ -119,7 +117,7 @@ def coding_plan_search(
         Text content with the VLM analysis result containing the content field.
     """
 )
-def coding_plan_vlm(
+def understand_image(
     prompt: str,
     image_source: str,
 ) -> TextContent:

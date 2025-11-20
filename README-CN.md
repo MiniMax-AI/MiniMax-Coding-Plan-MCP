@@ -34,7 +34,7 @@
 <p align="center" style="line-height: 1.5; font-size: 18px; margin: 4px auto; text-decoration: underline;"><a href="README.md">English Version</a></p>
 
 <p align="center">
-  专为  <a href="https://platform.minimaxi.com/docs/coding-plan/intro">coding-plan</a> 用户设计的 MiniMax 模型上下文协议(MCP)服务器，提供针对代码开发工作流优化的AI搜索和视觉分析API。与标准的 <a href="https://github.com/MiniMax-AI/MiniMax-MCP">MiniMax-MCP</a> 不同，此版本提供专门的编程工具（例如<code>coding_plan_search</code> 和 <code>coding_plan_vlm</code>），可无缝集成到 <a href="https://www.anthropic.com/claude">Claude Desktop</a>、<a href="https://www.cursor.so">Cursor</a>、<a href="https://codeium.com/windsurf">Windsurf</a>、<a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> 等 MCP 客户端，以增强您的编码体验。
+  专为  <a href="https://platform.minimaxi.com/docs/coding-plan/intro">coding-plan</a> 用户设计的 MiniMax 模型上下文协议(MCP)服务器，提供针对代码开发工作流优化的AI搜索和视觉分析API。与标准的 <a href="https://github.com/MiniMax-AI/MiniMax-MCP">MiniMax-MCP</a> 不同，此版本提供专门的编程工具（例如<code>web_search</code> 和 <code>understand_image</code>），可无缝集成到 <a href="https://www.anthropic.com/claude">Claude Desktop</a>、<a href="https://www.cursor.so">Cursor</a>、<a href="https://codeium.com/windsurf">Windsurf</a>、<a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> 等 MCP 客户端，以增强您的编码体验。
 </p>
 
 ## Documentation
@@ -64,9 +64,7 @@
       ],
       "env": {
         "MINIMAX_API_KEY": "填写你的API密钥",
-        "MINIMAX_MCP_BASE_PATH": "本地输出目录路径，如/User/xxx/Desktop",
-        "MINIMAX_API_HOST": "填写API Host, https://api.minimaxi.com 或 https://api.minimax.io",
-        "MINIMAX_API_RESOURCE_MODE": "可选配置，资源生成后的提供方式, 可选项为 [url|local], 默认为 url"
+        "MINIMAX_API_HOST": "填写API Host, https://api.minimaxi.com 或 https://api.minimax.io"
       }
     }
   }
@@ -97,20 +95,20 @@
 ## 可用方法
 | 方法  | 描述  |
 |-|-|
-|`coding_plan_search`|执行网络搜索并返回有机搜索结果以及相关搜索查询|
-|`coding_plan_vlm`|基于文本提示使用AI分析图像，提取信息并回答关于图像的问题|
+|`web_search`|执行网络搜索并返回有机搜索结果以及相关搜索查询|
+|`understand_image`|基于文本提示使用AI分析图像，提取信息并回答关于图像的问题|
 
 ## 更新日志
 
 ### 2025年11月20日
 
 #### 🆕 新增功能
-- **网络搜索**: 新增 `coding_plan_search` 工具 - 执行网络搜索并获取有机搜索结果及相关搜索查询
-- **视觉语言模型**: 新增 `coding_plan_vlm` 工具 - 基于文本提示使用AI分析图像
+- **网络搜索**: 新增 `web_search` 工具 - 执行网络搜索并获取有机搜索结果及相关搜索查询
+- **视觉语言模型**: 新增 `understand_image` 工具 - 基于文本提示使用AI分析图像
 
 #### 📈 功能特性
-- `coding_plan_search` - 搜索网络并获取结构化结果，包括标题、链接、摘要和相关搜索
-- `coding_plan_vlm` - 分析来自URL或本地文件的图像，支持JPEG、PNG、GIF和WebP格式
+- `web_search` - 搜索网络并获取结构化结果，包括标题、链接、摘要和相关搜索
+- `understand_image` - 分析来自URL或本地文件的图像，支持JPEG、PNG、GIF和WebP格式
 
 ## FAQ
 ### 1. invalid api key
@@ -134,13 +132,13 @@ which uvx
 ⚠️ 注意：使用这些工具可能会产生费用。
 
 ### 1. 网络搜索
-使用 `coding_plan_search` 工具在网络上搜索信息：
+使用 `web_search` 工具在网络上搜索信息：
 
 <img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/99ff15e3-e5d6-48e2-8216-38c6abf03c71.image/png" style="display: 
 inline-block; vertical-align: middle; "/>
 
 ### 2. 图像分析
-使用 `coding_plan_vlm` 工具通过AI分析图像：
+使用 `understand_image` 工具通过AI分析图像：
 
 <img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/1f8174a2-68d5-4576-b886-86933eab5280.image/png" style="display: 
 inline-block; vertical-align: middle; "/>

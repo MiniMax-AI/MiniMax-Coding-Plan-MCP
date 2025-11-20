@@ -35,28 +35,19 @@ def test_make_output_path():
         assert result.exists()
         assert result.is_dir()
 
-    # Test with None output_directory (should use base_path)
-    base_path = "/tmp/test_base"
-    result = build_output_path(None, base_path, is_test=True)
-    assert result == Path(base_path)
+    # Test with None output_directory (should use Desktop)
+    result = build_output_path(None, is_test=True)
+    assert result == Path.home() / "Desktop"
     
-    # Test with relative output_directory
-    base_path = "/tmp/test_base"
-    result = build_output_path("subdir", base_path, is_test=True)
-    assert result == Path(base_path) / "subdir"
-    
-    # Test with absolute output_directory (should ignore base_path)
+    # Test with absolute output_directory
     abs_path = "/absolute/path"
-    result = build_output_path(abs_path, "/some/base/path", is_test=True)
+    result = build_output_path(abs_path, is_test=True)
     assert result == Path(abs_path)
 
+    # Test with tilde expansion
     abs_path = "~/absolute/path"
-    result = build_output_path(abs_path, "/some/base/path", is_test=True)
+    result = build_output_path(abs_path, is_test=True)
     assert result == Path(Path.home() / "absolute/path")
-    
-    # Test with None base_path (should use desktop)
-    result = build_output_path(None, None, is_test=True)
-    assert result == Path.home() / "Desktop"
     
 
 

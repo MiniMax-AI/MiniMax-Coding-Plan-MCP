@@ -1,6 +1,6 @@
 [project]
 name = "minimax-coding-plan-mcp"
-version = "0.0.1"
+version = "0.0.2"
 description = "Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users"
 authors = [
     { name = "Roy Wu", email = "zhengyu@minimax.chat" },
@@ -17,8 +17,8 @@ classifiers = [
 keywords = [
     "minimax",
     "mcp",
-    "coding-plan-search",
-    "coding-plan-vlm",
+    "web_search",
+    "understand-image",
 ]
 requires-python = ">=3.10"
 dependencies = [
