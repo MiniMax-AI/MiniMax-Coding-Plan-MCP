@@ -41,8 +41,6 @@ def process_image_url(image_url: str) -> str:
                 image_format = 'jpeg'
             elif 'png' in content_type:
                 image_format = 'png'
-            elif 'gif' in content_type:
-                image_format = 'gif'
             elif 'webp' in content_type:
                 image_format = 'webp'
             else:
@@ -69,8 +67,6 @@ def process_image_url(image_url: str) -> str:
                 image_format = 'jpeg'  # Default
                 if image_url.lower().endswith('.png'):
                     image_format = 'png'
-                elif image_url.lower().endswith('.gif'):
-                    image_format = 'gif'
                 elif image_url.lower().endswith('.webp'):
                     image_format = 'webp'
                 elif image_url.lower().endswith(('.jpg', '.jpeg')):

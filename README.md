@@ -107,7 +107,7 @@ We support two transport types: stdio and sse.
 
 #### 📈 Features
 - `web_search` - Search the web and get structured results including titles, links, snippets, and related searches
-- `understand_image` - Analyze images from URLs or local files, supporting JPEG, PNG, GIF, and WebP formats
+- `understand_image` - Analyze images from URLs or local files, supporting JPEG, PNG, and WebP formats
 
 ## FAQ
 ### 1. invalid api key

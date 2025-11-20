@@ -108,7 +108,7 @@
 
 #### 📈 功能特性
 - `web_search` - 搜索网络并获取结构化结果，包括标题、链接、摘要和相关搜索
-- `understand_image` - 分析来自URL或本地文件的图像，支持JPEG、PNG、GIF和WebP格式
+- `understand_image` - 分析来自URL或本地文件的图像，支持JPEG、PNG和WebP格式
 
 ## FAQ
 ### 1. invalid api key
