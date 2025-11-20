@@ -133,11 +133,11 @@ Once you obtain the absolute path (e.g., /usr/local/bin/uvx), update your config
 ### 1. Web Search
 Use the `web_search` tool to search for information on the web:
 
-<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/99ff15e3-e5d6-48e2-8216-38c6abf03c71.image/png" style="display: 
+<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-21/user/multi_chat_file/4e613232-09d1-4860-8f7e-41ab7683cbc8.image/png" style="display: 
 inline-block; vertical-align: middle; "/>
 
 ### 2. Image Analysis
 Use the `understand_image` tool to analyze images with AI:
 
-<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/1f8174a2-68d5-4576-b886-86933eab5280.image/png" style="display: 
+<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-21/user/multi_chat_file/80c9792c-09f6-430c-9814-e535354c4596.image/png" style="display: 
 inline-block; vertical-align: middle; "/>
