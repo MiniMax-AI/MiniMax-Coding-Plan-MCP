@@ -1,2 +1,0 @@
-[console_scripts]
-minimax-mcp = minimax_mcp.server:main

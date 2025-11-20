@@ -1,0 +1,16 @@
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+
+.env
+.venv
+.cursor
+.cursorignore
+build/
+dist/
+*.egg-info/
+.coverage
+coverage.xml
