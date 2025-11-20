@@ -134,11 +134,11 @@ which uvx
 ### 1. 网络搜索
 使用 `web_search` 工具在网络上搜索信息：
 
-<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/99ff15e3-e5d6-48e2-8216-38c6abf03c71.image/png" style="display: 
+<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-21/user/multi_chat_file/4e613232-09d1-4860-8f7e-41ab7683cbc8.image/png" style="display: 
 inline-block; vertical-align: middle; "/>
 
 ### 2. 图像分析
 使用 `understand_image` 工具通过AI分析图像：
 
-<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/1f8174a2-68d5-4576-b886-86933eab5280.image/png" style="display: 
+<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-21/user/multi_chat_file/80c9792c-09f6-430c-9814-e535354c4596.image/png" style="display: 
 inline-block; vertical-align: middle; "/>
