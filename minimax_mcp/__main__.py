@@ -49,7 +49,7 @@ def generate_config(api_key: str | None = None):
             "Minimax": {
                 "command": "uvx",
                 "args": [
-                    "minimax-mcp",
+                    "minimax-coding-plan-mcp",
                 ],
 
                 "env": {
