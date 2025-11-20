@@ -1,0 +1,60 @@
+[project]
+name = "minimax-mcp"
+version = "0.0.17"
+description = "Minimax MCP Server"
+authors = [
+    { name = "Roy Wu", email = "zhengyu@minimax.chat" },
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+keywords = [
+    "minimax",
+    "mcp",
+    "text-to-speech",
+    "voice-cloning",
+    "video-generation",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "fastapi>=0.109.2",
+    "uvicorn>=0.27.1",
+    "python-dotenv>=1.0.1",
+    "pydantic>=2.6.1",
+    "httpx>=0.28.1",
+    "fuzzywuzzy>=0.18.0",
+    "python-Levenshtein>=0.25.0",
+    "sounddevice>=0.5.1",
+    "soundfile>=0.13.1",
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+minimax-mcp = "minimax_mcp.server:main"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=3.6.2",
+    "ruff>=0.3.0",
+    "fastmcp>=0.4.1",
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "twine>=6.1.0",
+    "build>=1.0.3",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=minimax_mcp --cov-report=term-missing"
