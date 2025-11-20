@@ -37,7 +37,7 @@
 
 ## Documentation
 - [中文文档](README-CN.md)
-- [MiniMax-MCP-JS](https://github.com/MiniMax-AI/MiniMax-MCP-JS) - Official JavaScript implementation of MiniMax MCP
+
 
 ## Quickstart with MCP Client
 1. Get your API key from [MiniMax](https://www.minimax.io/platform/user-center/basic-information/interface-key). 
@@ -134,13 +134,12 @@ Once you obtain the absolute path (e.g., /usr/local/bin/uvx), update your config
 
 ### 1. Web Search
 Use the `coding_plan_search` tool to search for information on the web:
-```
-Example query: "Latest AI breakthroughs in 2025"
-Returns: Organic search results with titles, links, snippets, dates, and related search queries
-```
+
+<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/99ff15e3-e5d6-48e2-8216-38c6abf03c71.image/png" style="display: 
+inline-block; vertical-align: middle; "/>
 
 ### 2. Image Analysis
 Use the `coding_plan_vlm` tool to analyze images with AI:
-```
-<img src="https://public-cdn-video-data-algeng.oss-cn-wulanchabu.aliyuncs.com/gen_image1.png?x-oss-process=image/resize,p_50/format,webp" style="display: 
-inline-block; vertical-align: middle; "/>```
+
+<img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/1f8174a2-68d5-4576-b886-86933eab5280.image/png" style="display: 
+inline-block; vertical-align: middle; "/>
