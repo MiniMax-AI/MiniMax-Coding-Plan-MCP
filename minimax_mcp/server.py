@@ -26,9 +26,7 @@ from minimax_mcp.client import MinimaxAPIClient
 
 load_dotenv()
 api_key = os.getenv(ENV_MINIMAX_API_KEY)
-base_path = os.getenv(ENV_MINIMAX_MCP_BASE_PATH) or "~/Desktop"
 api_host = os.getenv(ENV_MINIMAX_API_HOST)
-resource_mode = os.getenv(ENV_RESOURCE_MODE) or RESOURCE_MODE_URL
 fastmcp_log_level = os.getenv(ENV_FASTMCP_LOG_LEVEL) or "WARNING"
 
 if not api_key:
@@ -40,14 +38,15 @@ mcp = FastMCP("Minimax",log_level=fastmcp_log_level)
 api_client = MinimaxAPIClient(api_key, api_host)
 
 @mcp.tool(
-    description="""Search for information using a search query.
+    description="""
     
-    This tool performs web searches and returns organic search results along with related search queries.
+    Web Search API, works like Google Search.
     
-    COST WARNING: This tool makes an API call to Minimax which may incur costs. Only use when explicitly requested by the user.
-
     Args:
-        query (str): The search query string.
+        query (str): The search query string. Use 3-5 keywords. Add the current date for time-sensitive queries, e.g. `latest iPhone 2025`
+        
+    Search Strategy:
+        - If no valid results found, try changing search keywords
         
     Returns:
         Text content with search results in JSON format. The response structure is:
@@ -72,7 +71,7 @@ api_client = MinimaxAPIClient(api_key, api_host)
         }
     """
 )
-def coding_plan_search(
+def web_search(
     query: str,
 ) -> TextContent:
     try:
@@ -101,25 +100,25 @@ def coding_plan_search(
 
 
 @mcp.tool(
-    description="""Analyze an image with AI based on your text prompt.
+    description="""
     
-    This tool analyzes images and answers questions or extracts information based on your prompt.
-    
-    COST WARNING: This tool makes an API call to Minimax which may incur costs. Only use when explicitly requested by the user.
-    
+    A powerful LLM that can analyze and understand image content from files or URLs, follow your instruction.
+    Use this tool to understand images by LLM.
+    Only support jpeg, png, webp formats. Other formats like pdf/gif/psd/svg and so on are not supported.
+        
     Args:
         prompt (str): The text prompt describing what you want to analyze or extract from the image.
         image_source (str): The source location of the image to analyze.
             Accepts:
             - HTTP/HTTPS URL: "https://example.com/image.jpg"
             - Local file path: "/path/to/image.png"
-            Supported formats: JPEG, PNG, GIF, WebP
+            Supported formats: JPEG, PNG, WebP
         
     Returns:
-        Text content with the VLM analysis result containing the content field.
+        Text content with the image analysis result.
     """
 )
-def coding_plan_vlm(
+def understand_image(
     prompt: str,
     image_source: str,
 ) -> TextContent:

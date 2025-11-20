@@ -32,7 +32,7 @@
 </div>
 
 <p align="center">
-  Specialized MiniMax Model Context Protocol (MCP) server designed for  <a href="https://platform.minimax.io/docs/coding-plan/intro">coding-plan</a> users, featuring AI-powered search and vision analysis APIs optimized for code development workflows. Unlike the standard <a href="https://github.com/MiniMax-AI/MiniMax-MCP">MiniMax-MCP</a>, this version provides coding-specific tools (for examples: <code>coding_plan_search</code> and <code>coding_plan_vlm</code>) that integrate seamlessly with MCP clients like <a href="https://www.anthropic.com/claude">Claude Desktop</a>, <a href="https://www.cursor.so">Cursor</a>, <a href="https://codeium.com/windsurf">Windsurf</a>, <a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> and others to enhance your coding experience.
+  Specialized MiniMax Model Context Protocol (MCP) server designed for  <a href="https://platform.minimax.io/docs/coding-plan/intro">coding-plan</a> users, featuring AI-powered search and vision analysis APIs optimized for code development workflows. Unlike the standard <a href="https://github.com/MiniMax-AI/MiniMax-MCP">MiniMax-MCP</a>, this version provides coding-specific tools (for examples: <code>web_search</code> and <code>understand_image</code>) that integrate seamlessly with MCP clients like <a href="https://www.anthropic.com/claude">Claude Desktop</a>, <a href="https://www.cursor.so">Cursor</a>, <a href="https://codeium.com/windsurf">Windsurf</a>, <a href="https://github.com/openai/openai-agents-python">OpenAI Agents</a> and others to enhance your coding experience.
 </p>
 
 ## Documentation
@@ -64,9 +64,7 @@ Go to `Claude > Settings > Developer > Edit Config > claude_desktop_config.json`
       ],
       "env": {
         "MINIMAX_API_KEY": "insert-your-api-key-here",
-        "MINIMAX_MCP_BASE_PATH": "local-output-dir-path, such as /User/xxx/Desktop",
-        "MINIMAX_API_HOST": "api host, https://api.minimax.io | https://api.minimaxi.com",
-        "MINIMAX_API_RESOURCE_MODE": "optional, [url|local], url is default, audio/image/video are downloaded locally or provided in URL format"
+        "MINIMAX_API_HOST": "api host, https://api.minimax.io | https://api.minimaxi.com"
       }
     }
   }
@@ -96,20 +94,20 @@ We support two transport types: stdio and sse.
 ## Available Tools
 | tool  | description  |
 |-|-|
-|`coding_plan_search`|Performs web searches and returns organic search results along with related search queries|
-|`coding_plan_vlm`|Analyzes images with AI based on text prompts, extracts information and answers questions about images|
+|`web_search`|Performs web searches and returns organic search results along with related search queries|
+|`understand_image`|Analyzes images with AI based on text prompts, extracts information and answers questions about images|
 
 ## Release Notes
 
 ### November 20, 2025
 
 #### 🆕 What's New
-- **Web Search**: New `coding_plan_search` tool - perform web searches and get organic results with related search queries
-- **Vision Language Model**: New `coding_plan_vlm` tool - analyze images using AI based on text prompts
+- **Web Search**: New `web_search` tool - perform web searches and get organic results with related search queries
+- **Vision Language Model**: New `understand_image` tool - analyze images using AI based on text prompts
 
 #### 📈 Features
-- `coding_plan_search` - Search the web and get structured results including titles, links, snippets, and related searches
-- `coding_plan_vlm` - Analyze images from URLs or local files, supporting JPEG, PNG, GIF, and WebP formats
+- `web_search` - Search the web and get structured results including titles, links, snippets, and related searches
+- `understand_image` - Analyze images from URLs or local files, supporting JPEG, PNG, and WebP formats
 
 ## FAQ
 ### 1. invalid api key
@@ -133,13 +131,13 @@ Once you obtain the absolute path (e.g., /usr/local/bin/uvx), update your config
 ⚠️ Warning: Using these tools may incur costs.
 
 ### 1. Web Search
-Use the `coding_plan_search` tool to search for information on the web:
+Use the `web_search` tool to search for information on the web:
 
 <img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/99ff15e3-e5d6-48e2-8216-38c6abf03c71.image/png" style="display: 
 inline-block; vertical-align: middle; "/>
 
 ### 2. Image Analysis
-Use the `coding_plan_vlm` tool to analyze images with AI:
+Use the `understand_image` tool to analyze images with AI:
 
 <img src="https://cdn.hailuoai.video/moss/prod/2025-11-20-15/user/multi_chat_file/1f8174a2-68d5-4576-b886-86933eab5280.image/png" style="display: 
 inline-block; vertical-align: middle; "/>
