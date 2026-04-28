@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/minimax-ai-minimax-coding-plan-mcp-badge.png)](https://mseep.ai/app/minimax-ai-minimax-coding-plan-mcp)
+
 ![export](https://github.com/MiniMax-AI/MiniMax-01/raw/main/figures/MiniMaxLogo-Light.png)
 
 <div align="center" style="line-height: 1;">
