@@ -14,7 +14,7 @@ Note: Tools without cost warnings are free to use as they only read existing dat
 import os
 import json
 from dotenv import load_dotenv
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from mcp.types import TextContent
 from minimax_mcp.utils import (
     process_image_url,
@@ -27,14 +27,13 @@ from minimax_mcp.client import MinimaxAPIClient
 load_dotenv()
 api_key = os.getenv(ENV_MINIMAX_API_KEY)
 api_host = os.getenv(ENV_MINIMAX_API_HOST)
-fastmcp_log_level = os.getenv(ENV_FASTMCP_LOG_LEVEL) or "WARNING"
 
 if not api_key:
     raise ValueError("MINIMAX_API_KEY environment variable is required")
 if not api_host:
     raise ValueError("MINIMAX_API_HOST environment variable is required")
 
-mcp = FastMCP("Minimax",log_level=fastmcp_log_level)
+mcp = FastMCP("Minimax")
 api_client = MinimaxAPIClient(api_key, api_host)
 
 @mcp.tool(
