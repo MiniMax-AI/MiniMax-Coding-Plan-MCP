@@ -1,6 +1,6 @@
 [project]
 name = "minimax-coding-plan-mcp"
-version = "0.0.4"
+version = "0.0.5"
 description = "Specialized MiniMax Model Context Protocol (MCP) server designed for coding-plan users"
 authors = [
     { name = "Roy Wu", email = "zhengyu@minimax.chat" },
@@ -22,7 +22,7 @@ keywords = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "mcp[cli]>=1.6.0",
+    "mcp[cli]>=2.0.0,<3",
     "python-dotenv>=1.0.1",
     "requests>=2.31.0",
 ]
@@ -34,7 +34,6 @@ minimax-coding-plan-mcp = "minimax_mcp.server:main"
 dev = [
     "pre-commit>=3.6.2",
     "ruff>=0.3.0",
-    "fastmcp>=0.4.1",
     "pytest>=8.0.0",
     "pytest-cov>=4.1.0",
     "twine>=6.1.0",
