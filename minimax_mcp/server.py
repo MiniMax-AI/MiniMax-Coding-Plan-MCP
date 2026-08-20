@@ -14,13 +14,17 @@ Note: Tools without cost warnings are free to use as they only read existing dat
 import os
 import json
 from dotenv import load_dotenv
-from mcp.server.fastmcp import FastMCP
+from mcp.server import MCPServer
 from mcp.types import TextContent
 from minimax_mcp.utils import (
     process_image_url,
 )
 
-from minimax_mcp.const import *
+from minimax_mcp.const import (
+    ENV_FASTMCP_LOG_LEVEL,
+    ENV_MINIMAX_API_HOST,
+    ENV_MINIMAX_API_KEY,
+)
 from minimax_mcp.exceptions import MinimaxAPIError, MinimaxRequestError
 from minimax_mcp.client import MinimaxAPIClient
 
@@ -34,7 +38,7 @@ if not api_key:
 if not api_host:
     raise ValueError("MINIMAX_API_HOST environment variable is required")
 
-mcp = FastMCP("Minimax",log_level=fastmcp_log_level)
+mcp = MCPServer("Minimax", log_level=fastmcp_log_level)
 api_client = MinimaxAPIClient(api_key, api_host)
 
 @mcp.tool(
@@ -170,7 +174,6 @@ def understand_image(
 
 
 def main():
-    print("Starting Minimax MCP server")
     """Run the Minimax MCP server"""
     mcp.run()
 
