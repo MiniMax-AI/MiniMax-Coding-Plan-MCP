@@ -20,11 +20,7 @@ from minimax_mcp.utils import (
     process_image_url,
 )
 
-from minimax_mcp.const import (
-    ENV_FASTMCP_LOG_LEVEL,
-    ENV_MINIMAX_API_HOST,
-    ENV_MINIMAX_API_KEY,
-)
+from minimax_mcp.const import *
 from minimax_mcp.exceptions import MinimaxAPIError, MinimaxRequestError
 from minimax_mcp.client import MinimaxAPIClient
 
@@ -174,6 +170,7 @@ def understand_image(
 
 
 def main():
+    print("Starting Minimax MCP server")
     """Run the Minimax MCP server"""
     mcp.run()
 

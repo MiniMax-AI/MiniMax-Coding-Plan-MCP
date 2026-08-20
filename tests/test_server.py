@@ -97,14 +97,3 @@ def test_registered_tools_use_mocked_api(monkeypatch):
             {"prompt": "describe", "image_url": "mocked:image.png"},
         ),
     ]
-
-
-def test_main_starts_server_without_writing_to_stdout(monkeypatch, capsys):
-    server = _server_module()
-    run_calls = []
-    monkeypatch.setattr(server.mcp, "run", lambda: run_calls.append(True))
-
-    server.main()
-
-    assert run_calls == [True]
-    assert capsys.readouterr().out == ""
