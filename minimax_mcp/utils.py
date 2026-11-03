@@ -35,7 +35,7 @@ def process_image_url(image_url: str) -> str:
     # Handle HTTP/HTTPS URLs
     if image_url.startswith(("http://", "https://")):
         try:
-            image_response = requests.get(image_url)
+            image_response = requests.get(image_url, timeout=30)
             image_response.raise_for_status()
             image_data = image_response.content
             
